@@ -15,3 +15,9 @@ RUN mkdir ${TINGYUN_HOME} && \
     wget http://download.tingyun.com/agent/python/${TINGYUN_AGENT_VERSION}/tingyun-agent-python-${TINGYUN_AGENT_VERSION}.tar.gz && \
     tar –zxf tingyun-agent-python-${TINGYUN_AGENT_VERSION}.tar.gz –C ${TINGYUN_HOME} && \
     python ${TINGYUN_HOME}/tingyun-agent-python-${TINGYUN_AGENT_VERSION}/setup.py install
+    
+ADD setenv.sh /setenv.sh
+
+RUN chmod +x /setenv.sh
+
+CMD setenv.sh;python2
