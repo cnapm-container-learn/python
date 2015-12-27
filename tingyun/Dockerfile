@@ -24,6 +24,6 @@ RUN chmod +x /setenv.sh
 #Add a example app in your app dir default is /tingyun
 ADD example/server.py ${TINGYUN_HOME}/server.py
 
-EXPOSE 8080
+EXPOSE 8000
 
 CMD /setenv.sh
