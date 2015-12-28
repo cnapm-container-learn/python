@@ -17,7 +17,7 @@ ADD setenv.sh /setenv.sh
 
 RUN chmod +x /setenv.sh
 
-#Add a example app in your app dir default is /tingyun
+#Add a example app in your app dir default is /OneAPM
 ADD example/* /OneAPM/
 
 EXPOSE 8000
